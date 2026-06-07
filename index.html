@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Legends GM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>NBA Legends GM</h1>
+            <div id="stats-bar">
+                <span>Team: <strong id="team-name">N/A</strong></span>
+                <span>Budget: <strong id="budget">$0</strong></span>
+                <span>Wins: <strong id="wins">0</strong> - Losses: <strong id="losses">0</strong></span>
+            </div>
+        </header>
+
+            <div id="setup-screen" class="screen">
+                <h2>Choose Your City</h2>
+                <input type="text" id="city-input" placeholder="e.g. Chicago">
+                <button id="start-game-btn">Start Career</button>
+            </div>
+
+            <div id="main-screen" class="screen hidden">
+                <nav>
+                    <button class="nav-btn active" data-target="roster-view">Roster</button>
+                    <button class="nav-btn" data-target="market-view">Free Agents</button>
+                    <button class="nav-btn" data-target="schedule-view">Schedule</button>
+                </nav>
+
+                <div id="roster-view" class="tab-content">
+                    <h3>Your Roster</h3>
+                    <div id="roster-list"></div>
+                </div>
+
+                <div id="market-view" class="tab-content hidden">
+                    <h3>Free Agent Market</h3>
+                    <div id="market-list"></div>
+                </div>
+
+                <div id="schedule-view" class="tab-content hidden">
+                    <h3>Season Progress</h3>
+                    <button id="sim-game-btn">Simulate Next Game</button>
+                    <div id="game-log"></div>
+                </div>
+            </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
